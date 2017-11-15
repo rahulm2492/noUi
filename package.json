@@ -4,7 +4,7 @@
   "description": "shopppingCartCode",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register",
+    "test": "nyc mocha --compilers js:babel-core/register",
     "js": "babel index.js --out-file public/app.js"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "grunt": "^1.0.1",
     "grunt-babel": "^7.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "nyc": "^11.3.0"
   }
 }

@@ -1,21 +1,19 @@
 module.exports = function (grunt) {
-
-    require("load-grunt-tasks")(grunt);
+require("load-grunt-tasks")(grunt);
 	grunt.initConfig({
 		babel: {
 			compile: {
 				options: {
-					sourceMap: true,
 					presets: ['env']
 				},
 				files: {
-					'public/app.js': 'index.js'
+					'public/app.js': 'app/*.js'
 				}
 			}
         },
         watch: {
             scripts: {
-              files: ['*.js'],
+              files: ['app/*.js'],
               tasks: ['babel'],
               options: {
                 spawn: false,
@@ -26,8 +24,6 @@ module.exports = function (grunt) {
 	});
     grunt.loadNpmTasks('grunt-contrib-watch');
      
-	
-
     grunt.registerTask('default', ['babel']);
     
     
